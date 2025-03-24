@@ -1,4 +1,3 @@
-
 # Vaultwarden
 
 [Vaultwarden](https://github.com/dani-garcia/vaultwarden), is an alternative implementation of the Bitwarden server API written in Rust and compatible with [upstream Bitwarden clients](https://bitwarden.com/download/).
@@ -320,14 +319,14 @@ attachments:
 
 ### Using an Existing Persistent Volume Claim
 
-In case you want to use an existing PVC to store your data and attachments (i.e. NAS), `storage.existingVolumeClaim` can be set, which will update the PodSpec to use the provided PVC.  Note, that use of this value will ignore the values of both `storage.data` 
+In case you want to use an existing PVC to store your data and attachments (i.e. NAS), `storage.existingVolumeClaim` can be set, which will update the PodSpec to use the provided PVC. Note, that use of this value will ignore the values of both `storage.data`
 and `storage.attachments` values.
 
 ```yaml
 existingVolumeClaim:
-    claimName: "vaultwarden-pvc"
-    dataPath: "/data"
-    attachmentsPath: /data/attachments
+  claimName: "vaultwarden-pvc"
+  dataPath: "/data"
+  attachmentsPath: /data/attachments
 ```
 
 ## Uninstall
